@@ -2,6 +2,7 @@ import express from "express";
 import cors from 'cors'
 import 'dotenv/config'
 import { MongoClient } from "mongodb";
+import serverless from 'serverless-http';
 
 const URI = process.env.MONGO_URI
 const PORT = process.env.PORT
@@ -28,3 +29,5 @@ app.post('/add', async (req,res) => {
     await users.insertOne({name: 'Pallavi',supose: 'sathish',occupation: 'Front Developer'})
     res.json('Item was added')
 })
+export const handler = serverless(app);
+
