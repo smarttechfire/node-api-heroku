@@ -1,7 +1,7 @@
 {
   "name": "api-heroku",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"# node-api-heroku\"",
   "main": "index.js",
   "type": "module",
   "engines": {
