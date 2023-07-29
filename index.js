@@ -21,7 +21,7 @@ app.use(express.json())
 app.listen(PORT, () => console.log('api running'))
 
 // app.get('/',(req,res) => res.json('Here is the get route'))
-app.get('/',async(req,res)=>{
+app.get('/all',async(req,res)=>{
     const allUsers = await users.find().toArray()
     res.json(allUsers)
 })
